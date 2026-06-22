@@ -594,41 +594,36 @@ function submitRegister() {
 
 .form-wrapper {
   position: fixed;
-  right: 0;
-  height: 100%;
+  inset: 0;
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
   @media (max-width: 767px) {
-    width: 100%;
+    padding: 18px;
+    align-items: center;
   }
 }
 
 .container {
   background: v-bind(loginOpacity);
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 450px;
-  height: 100%;
-  border-left: 1px solid var(--login-border);
+  height: fit-content;
+  border: 1px solid var(--login-border);
+  border-radius: 10px;
   box-shadow: var(--el-box-shadow-light);
   @media (max-width: 1024px) {
-    padding: 20px 18px;
+    padding: 24px 18px;
     width: 384px;
-    margin-left: 18px;
   }
   @media (max-width: 767px) {
-    border: 1px solid var(--login-border);
-    padding: 20px 18px;
-    border-radius: 6px;
-    height: fit-content;
+    padding: 24px 18px;
+    border-radius: 8px;
     width: 100%;
-    margin-right: 18px;
-    margin-left: 18px;
   }
 
   .btn {
